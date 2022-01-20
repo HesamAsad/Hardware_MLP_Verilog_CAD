@@ -15,7 +15,8 @@ module get_max (
     assign in[8]=in9;
     assign in[9]=in10;
     integer i;
-    always @(in1,in2,in3,in4,in5,in6,in7,in8,in9,in10) begin
+    always @(*) begin
+        max = 8'd0;
         for(i = 0; i < 10; i=i+1) begin
             if(in[i]>max) begin
                 max = in[i];

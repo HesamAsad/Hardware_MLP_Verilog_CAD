@@ -69,8 +69,8 @@ module controller (
             rst_cnt3: {sel_reg, rst_cnt} = {3'd1, 1'b1};
             rst_cnt4: {sel_reg, rst_cnt} = {3'd2, 1'b1};
             rst_cnt5: {sel_reg, rst_cnt} = {3'd3, 1'b1};
-            rst_cnt6: {sel_reg, rst_cnt} = {3'd0, 1'b1};
-            rst_cnt7: {sel_reg, rst_cnt} = {3'd0, 1'b1};
+            rst_cnt6: {sel_h_o, sel_reg, rst_cnt} = {1'b1, 3'd0, 1'b1};
+            rst_cnt7: {sel_h_o, sel_reg, rst_cnt} = {1'b1, 3'd0, 1'b1};
             init_h: {addr3, mem_read, addr1, ld, ld_x, cnt} = {test_num, 1'b1, cnt_in, onehot, 1'b1, 1'b1};
             n0_7_h_c1: {sel_reg, sel_64bit, cnt, ld_mult} = {3'd0, cnt_in[2:0], 1'b1, 1'b1};
             n0_7_h_c2: {sel_reg, sel_64bit, acc} = {3'd0, cnt_in[2:0], 1'b1};
@@ -87,10 +87,10 @@ module controller (
             init_o: {sel_h_o, addr2, mem_read, ld, ld_x, cnt} = {1'b1, cnt_in[3:0], 1'b1, onehot, 1'b1, 1'b1};
             n0_7_o_c1: {sel_h_o, sel_reg, sel_64bit, cnt, ld_mult} = {1'b1, 3'd0, cnt_in[2:0], 1'b1, 1'b1};
             n0_7_o_c2: {sel_h_o, sel_reg, sel_64bit, acc} = {1'b1, 3'd0, cnt_in[2:0], 1'b1};
-            save_o1: {sel_reg, ld_out_o} = {3'd0, 10'd255};
+            save_o1: {sel_h_o, sel_reg, ld_out_o} = {1'b1, 3'd0, 10'd255};
             n8_9_o_c1: {sel_h_o, sel_reg, sel_64bit, cnt, ld_mult} = {1'b1, 3'd1, cnt_in[2:0], 1'b1, 1'b1};
             n8_9_o_c2: {sel_h_o, sel_reg, sel_64bit, acc} = {1'b1, 3'd1, cnt_in[2:0], 1'b1};
-            save_o2: {sel_reg, ld_out_o} = {3'd1, 10'd768};
+            save_o2: {sel_h_o, sel_reg, ld_out_o} = {1'b1, 3'd1, 10'd768};
             get_max: done = 1'b1;
         endcase
     end
