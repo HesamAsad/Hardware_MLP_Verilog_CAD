@@ -2,3 +2,12 @@
 /CAD-Final.mpf
 /vsim.wlf
 /work
+CAD-FinalCA-Hesam_Mahdi.zip
+trunk/sim/modelsim.ini
+trunk/sim/vsim.dbg
+trunk/sim/vsim.wlf
+trunk/sim/work/_vmake
+*.qpg
+*.qdb
+*.qtl
+trunk/sim/work/_info

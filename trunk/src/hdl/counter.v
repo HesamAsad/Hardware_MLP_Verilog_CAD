@@ -1,4 +1,4 @@
-module mycounter (
+module counter (
     input clk, rst, cnt, 
     output reg[4:0] out
 );
