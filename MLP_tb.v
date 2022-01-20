@@ -13,11 +13,11 @@ module MLP_tb;
         for(i=0; i<100; i=i+1) begin
             rst = 1'b1;
             start = 1'b0;
-            test_num = $urandom%750;
+            test_num = $urandom($realtime)%750;
             #75 rst = 1'b0;
             start = 1'b1;
             #100 start = 1'b0;
-            #16000;
+            #16200;
             if(label == out)
                 cnt = cnt+1;
         end
