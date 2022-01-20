@@ -14,7 +14,7 @@ neuron uses a nonlinear activation function.
 The pre-trained model is a simple MLP neural network that classifies the MNIST dataset. The original
 MNIST dataset's images have dimensions of `28 x 28 pixels`, totally included `784` input features. In order
 to simplify the classifier neural network, the size of images is reduced to `62` features using some feature
-reduction algorithms. So, in this case, your neural network will have **62 input features.**
+reduction algorithms. So, in this case, our neural network will have **62 input features.**
 
 MNIST dataset has 10 output classes corresponding to the digits from 0 to 9, in which by recognizing the
 digit i, the i'th output becomes one. To identify the label of an input image, the maximum value between
