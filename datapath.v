@@ -15,7 +15,6 @@ module datapath (
     assign regw_out[31] = 8'd0;
     wire[30*8-1:0] wo, xo;
     wire[7:0] reg_xhout[0:29], reg_xoout[0:9];
-    wire[3:0] label;
     wire[63:0] mux_w_bit[0:31], w_in[0:7];
     wire[63:0] x_in;
     wire[7:0] pu_out[0:7], PU_bias[0:29];
@@ -33,7 +32,6 @@ module datapath (
     wo_mem      wo_(addr2, mem_read, wo);
     bo_mem      bo_(addr2, mem_read, bo);
     data_mem    x_(addr3, mem_read, xh);
-    label_mem   label_(addr3, mem_read, label);
     mux_2to1    mux_w(sel_h_o, wh, {wo, 256'd0}, _w_);
     mux_2to1    mux_x(sel_h_o, xh, {xo, 256'd0}, _x_);
     mux_2to1 #8 mux_b(sel_h_o, bh, bo, _b_);
