@@ -1,5 +1,7 @@
 # Hardware implementation of a MLP using Verilog
 
+<img src="https://github.com/HesamAsad/Hardware_MLP_Verilog/blob/master/report.jpg">
+
 In this project, the goal is to implement a simple MLP (Multi-Layer Perceptron) model of neural networks. A neural network for image classification based on
 the MNIST dataset is implemented in Verilog. The neural network hardware is implemented as a set of **processing units** (PUs) and a controller. 
 Each PUs is a multiply-and-accumulate unit that has eight inputs. It has **eight** multipliers, an adder tree, and an activation function (here ReLU).
