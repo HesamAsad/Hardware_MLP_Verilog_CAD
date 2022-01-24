@@ -11,3 +11,4 @@ trunk/sim/work/_vmake
 *.qdb
 *.qtl
 trunk/sim/work/_info
+trunk/sim/tb/MLP_tb.v.bak
